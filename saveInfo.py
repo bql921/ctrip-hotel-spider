@@ -5,6 +5,7 @@ import json
 import getHotelImages as GHI
 import configs
 import getHotelComments as GHC
+import getHotelDescription as GHD
 
 
 def recive_name(html_str: str) -> str:
@@ -123,9 +124,10 @@ def save_comments(hotel_id, ratingLimit=4.5):
     comments_dir = os.path.join(
         configs.HOTEL_IMAGES_DIR, f"{get_hotel_name(hotel_id)}_{hotel_id}"
     )
-    json_dir = os.path.join(comments_dir, "comments.json")
-    if not os.path.exists(comments_dir):
-        os.makedirs(comments_dir, exist_ok=True)
+    sub_dir = os.path.join(comments_dir, "comments_and_descriptions")
+    json_dir = os.path.join(sub_dir, f"{hotel_id}_comments.json")
+    if not os.path.exists(sub_dir):
+        os.makedirs(sub_dir, exist_ok=True)
     # 读取数据并写入json文件
     all_comments = GHC.fetchHotelComments(
         hotel_id, numPages=50, ratingLimit=ratingLimit
@@ -142,9 +144,31 @@ def save_comments(hotel_id, ratingLimit=4.5):
             indent=4,
         )
 
+
 def save_descriptions(hotel_id):
     """获取酒店描述信息并保存为json文件"""
-    
+    # 创建路径跟图像片放同一级{hotel_name}_{hotel_id}，然后再创建一个文件夹 存描述json
+    descriptions_dir = os.path.join(
+        configs.HOTEL_IMAGES_DIR, f"{get_hotel_name(hotel_id)}_{hotel_id}"
+    )
+    sub_dir = os.path.join(descriptions_dir, "comments_and_descriptions")
+    json_dir = os.path.join(sub_dir, f"{hotel_id}_description.json")
+    if not os.path.exists(sub_dir):
+        os.makedirs(sub_dir, exist_ok=True)
+    # 用宽松的函数
+    description = GHD.get_hotel_description_relaxed(hotel_id)
+    with open(json_dir, "w", encoding="utf-8") as f:
+        json.dump(
+            {
+                "hotelId": hotel_id,
+                "hotelURL": f"https://hotels.ctrip.com/hotels/{hotel_id}.html",
+                "description": description,
+            },
+            f,
+            ensure_ascii=False,
+            indent=4,
+        )
+
 
 if __name__ == "__main__":
     hotel_id = 9532016
@@ -152,4 +176,5 @@ if __name__ == "__main__":
     # print(f"Hotel Name: {hotel_name}")
     # save_json(hotel_id)
     # save_images(hotel_id)
-    save_comments(hotel_id, ratingLimit=4.5)
+    # save_comments(hotel_id, ratingLimit=4.5)
+    save_descriptions(hotel_id)
