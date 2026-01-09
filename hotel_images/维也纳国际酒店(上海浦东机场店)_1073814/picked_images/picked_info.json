@@ -1,0 +1,141 @@
+{
+    "hotelId": "1073814",
+    "hotelName": "维也纳国际酒店(上海浦东机场店)",
+    "strategy": "balanced",
+    "totalPicked": 19,
+    "images": [
+        {
+            "filename": "休闲_1.jpg",
+            "category": "hotel_images",
+            "subcategory": "休闲",
+            "resolution": "1280x800",
+            "size": 612459
+        },
+        {
+            "filename": "公共区域_8.jpg",
+            "category": "hotel_images",
+            "subcategory": "公共区域",
+            "resolution": "2048x1536",
+            "size": 282256
+        },
+        {
+            "filename": "其他_2.jpg",
+            "category": "hotel_images",
+            "subcategory": "其他",
+            "resolution": "1170x1560",
+            "size": 789045
+        },
+        {
+            "filename": "周边_3.jpg",
+            "category": "hotel_images",
+            "subcategory": "周边",
+            "resolution": "3968x2976",
+            "size": 3721872
+        },
+        {
+            "filename": "商务_1.jpg",
+            "category": "hotel_images",
+            "subcategory": "商务",
+            "resolution": "2048x1536",
+            "size": 239643
+        },
+        {
+            "filename": "外观_5.jpg",
+            "category": "hotel_images",
+            "subcategory": "外观",
+            "resolution": "1702x1276",
+            "size": 342637
+        },
+        {
+            "filename": "外观_4.jpg",
+            "category": "hotel_images",
+            "subcategory": "外观",
+            "resolution": "1280x800",
+            "size": 924418
+        },
+        {
+            "filename": "外观_2.jpg",
+            "category": "hotel_images",
+            "subcategory": "外观",
+            "resolution": "1280x800",
+            "size": 921518
+        },
+        {
+            "filename": "房间_25.jpg",
+            "category": "hotel_images",
+            "subcategory": "房间",
+            "resolution": "1170x1560",
+            "size": 484142
+        },
+        {
+            "filename": "精选_8.jpg",
+            "category": "hotel_images",
+            "subcategory": "精选",
+            "resolution": "1280x800",
+            "size": 924418
+        },
+        {
+            "filename": "餐饮_1.jpg",
+            "category": "hotel_images",
+            "subcategory": "餐饮",
+            "resolution": "1280x800",
+            "size": 688007
+        },
+        {
+            "filename": "餐饮_3.jpg",
+            "category": "hotel_images",
+            "subcategory": "餐饮",
+            "resolution": "1280x800",
+            "size": 683748
+        },
+        {
+            "filename": "休闲_21.jpg",
+            "category": "user_images",
+            "subcategory": "休闲",
+            "resolution": "4032x2268",
+            "size": 1644866
+        },
+        {
+            "filename": "公共区域_46.jpg",
+            "category": "user_images",
+            "subcategory": "公共区域",
+            "resolution": "4096x1816",
+            "size": 818917
+        },
+        {
+            "filename": "其他_19.jpg",
+            "category": "user_images",
+            "subcategory": "其他",
+            "resolution": "2622x1967",
+            "size": 2091009
+        },
+        {
+            "filename": "周边_10.jpg",
+            "category": "user_images",
+            "subcategory": "周边",
+            "resolution": "2796x2097",
+            "size": 2318150
+        },
+        {
+            "filename": "外观_11.jpg",
+            "category": "user_images",
+            "subcategory": "外观",
+            "resolution": "2151x2868",
+            "size": 2025402
+        },
+        {
+            "filename": "房间_30.jpg",
+            "category": "user_images",
+            "subcategory": "房间",
+            "resolution": "2796x2097",
+            "size": 2274542
+        },
+        {
+            "filename": "餐饮_32.jpg",
+            "category": "user_images",
+            "subcategory": "餐饮",
+            "resolution": "4032x3024",
+            "size": 2273131
+        }
+    ]
+}
